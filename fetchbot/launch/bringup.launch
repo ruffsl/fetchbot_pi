@@ -1,0 +1,14 @@
+<launch>
+  <!-- Turtlebot -->
+  <include file="$(find fetchbot)/launch/include/turtlebot_minimal.launch.xml" />
+
+  <!-- Laser -->
+  <include file="$(find fetchbot)/launch/include/laser.launch.xml" />
+
+  <!-- Mapper -->
+  <include file="$(find fetchbot)/launch/include/cartographer_turtlebot_2d.launch.xml" />
+
+  <!-- Ball IMU -->
+  <!-- <include file="$(find fetchbot)/launch/include/serial_imu.launch.xml" /> -->
+
+</launch>

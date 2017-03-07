@@ -8,6 +8,13 @@
   <!-- Mapper -->
   <include file="$(find fetchbot)/launch/include/cartographer_turtlebot_2d.launch.xml" />
 
+  <!-- Move base -->
+  <arg name="custom_param_file" default="$(find turtlebot_navigation)/param/r200_costmap_params.yaml"/>
+  <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml">
+    <arg name="custom_param_file" value="$(arg custom_param_file)"/>
+    <arg name="laser_topic" value="/laser_scan"/>
+  </include>
+
   <!-- Ball IMU -->
   <!-- <include file="$(find fetchbot)/launch/include/serial_imu.launch.xml" /> -->
 

@@ -5,6 +5,8 @@ Ball fetching robot
 
 Install dependencies:
 
+Setup udev for lidar via USB:
+https://github.com/uos/sick_tim/tree/indigo/udev
 
 ## Up and Running
 

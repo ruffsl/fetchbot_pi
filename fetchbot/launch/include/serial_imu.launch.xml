@@ -1,7 +1,7 @@
 <launch>
   <arg name="serialport" default="/dev/rfcomm0"  doc="used by create to configure the port it is connected on [/dev/ttyUSB0, /dev/ttyS0]"/>
 
-  <node name="ball_imu" pkg="fetchbot" type="serial_imu" respawn="true" >
+  <node name="ball_imu" pkg="fetchbot" type="serial_imu_node.py" respawn="true" >
     <arg name="serialport" value="$(arg serialport)" />
     <param name="frame_id" type="string" value="ball_link" />
     <remap from="imu" to="/ball_imu" />

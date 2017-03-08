@@ -146,7 +146,7 @@ catkin_package(
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 install(PROGRAMS
-  scripts/serial_imu
+  nodes/serial_imu_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

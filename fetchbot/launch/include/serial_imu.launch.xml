@@ -3,7 +3,7 @@
 
   <node name="ball_imu" pkg="fetchbot" type="serial_imu_node.py" respawn="false" output="screen">
     <param name="port" value="/dev/rfcomm0" />
-    <param name="baud" value="9600" />
+    <param name="baud" type="int" value="9600" />
     <param name="frame_id" value="ball_link" />
     <remap from="imu" to="ball_imu" />
   </node>

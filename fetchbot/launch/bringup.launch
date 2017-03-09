@@ -2,11 +2,22 @@
   <!-- Turtlebot -->
   <include file="$(find fetchbot)/launch/include/turtlebot_minimal.launch.xml" />
 
+  <!-- Teliop -->
+  <include file="$(find turtlebot_teleop)/launch/logitech.launch">
+  </include>
+
   <!-- Laser -->
   <include file="$(find fetchbot)/launch/include/laser.launch.xml" />
 
   <!-- Mapper -->
-  <include file="$(find fetchbot)/launch/include/cartographer_turtlebot_2d.launch.xml" />
+  <!-- <include file="$(find fetchbot)/launch/include/cartographer_turtlebot_2d.launch.xml" /> -->
+
+  <!-- Gmapping -->
+  <!-- <arg name="custom_gmapping_launch_file" default="$(find turtlebot_navigation)/launch/includes/gmapping/r200_gmapping.launch.xml"/>
+  <include file="$(arg custom_gmapping_launch_file)">
+    <arg name="scan_topic" value="/laser_scan"/>
+  </include> -->
+  <include file="$(find fetchbot)/launch/include/gmapping.launch.xml" />
 
   <!-- Move base -->
   <arg name="custom_param_file" default="$(find turtlebot_navigation)/param/r200_costmap_params.yaml"/>
@@ -16,6 +27,6 @@
   </include>
 
   <!-- Ball IMU -->
-  <!-- <include file="$(find fetchbot)/launch/include/serial_imu.launch.xml" /> -->
+  <include file="$(find fetchbot)/launch/include/serial_imu.launch.xml" />
 
 </launch>
